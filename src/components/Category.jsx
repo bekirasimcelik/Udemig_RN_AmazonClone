@@ -6,69 +6,25 @@ import {
   StyleSheet,
 } from 'react-native';
 import React from 'react';
+import {Categories} from '../data/Categories';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Category() {
+  const navigation = useNavigation();
   return (
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       style={styles.container}>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.category}>
-        <Image
-          style={styles.imgStyle}
-          source={require('../assets/fresh.jpeg')}
-        />
-        <Text style={styles.title}>Category</Text>
-      </TouchableOpacity>
+      {Categories.map(item => (
+        <TouchableOpacity
+          onPress={() => navigation.navigate('ProductScreen')}
+          key={item.id}
+          style={styles.category}>
+          <Image style={styles.imgStyle} source={item.image} />
+          <Text style={styles.title}>{item.title}</Text>
+        </TouchableOpacity>
+      ))}
     </ScrollView>
   );
 }
