@@ -32,7 +32,6 @@ export default function Deals() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    marginBottom: 30,
   },
   imgStyle: {
     width: '100%',
