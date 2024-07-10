@@ -37,7 +37,7 @@ export default function Services() {
         </View>
       </View>
       {RecentSearchData.map(item => (
-        <ServicesCard item={item} />
+        <ServicesCard key={item.id} item={item} />
       ))}
     </ScrollView>
   );

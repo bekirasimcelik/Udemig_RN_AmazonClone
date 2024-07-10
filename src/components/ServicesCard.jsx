@@ -4,7 +4,7 @@ import React from 'react';
 export default function ServicesCard({item}) {
   return (
     <View>
-      <View key={item.key} style={styles.outerContainer}>
+      <View style={styles.outerContainer}>
         <Text style={styles.recentSerach}>item.title</Text>
         <Image source={item.image} style={styles.serviceImg} />
       </View>

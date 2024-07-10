@@ -5,6 +5,7 @@ import SubHeader from '../components/SubHeader';
 import Category from '../components/Category';
 import Carousel from '../components/Carousel';
 import Services from '../components/Services';
+import Deals from '../components/Deals';
 
 export default function HomeScreen() {
   return (
@@ -14,6 +15,7 @@ export default function HomeScreen() {
       <Category />
       <Carousel />
       <Services />
+      <Deals />
     </ScrollView>
   );
 }
