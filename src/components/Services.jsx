@@ -5,6 +5,7 @@ import SendMoney from '../assets/send-money.jpg';
 import ScanQR from '../assets/scan-qr.jpeg';
 import PayBills from '../assets/pay-bills.jpeg';
 import {RecentSearchData} from '../data/RecentSearchData';
+import ServicesCard from './ServicesCard';
 
 export default function Services() {
   return (
@@ -36,10 +37,7 @@ export default function Services() {
         </View>
       </View>
       {RecentSearchData.map(item => (
-        <View key={item.key} style={styles.outerContainer}>
-          <Text style={styles.recentSerach}>item.title</Text>
-          <Image source={item.image} style={styles.serviceImg} />
-        </View>
+        <ServicesCard item={item} />
       ))}
     </ScrollView>
   );
@@ -68,26 +66,5 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 50,
-  },
-  title: {
-    fontSize: 10,
-    color: '#000',
-    marginTop: 2,
-  },
-  serviceImg: {
-    width: '100%',
-    height: 130,
-  },
-  recentSerach: {
-    fontSize: 13,
-    marginBottom: 8,
-    color: '#000',
-  },
-  outerContainer: {
-    backgroundColor: '#fff',
-    marginLeft: 8,
-    width: 140,
-    padding: 5,
-    borderRadius: 5,
   },
 });
