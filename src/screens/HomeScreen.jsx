@@ -11,7 +11,7 @@ import Brands from '../components/Brands';
 export default function HomeScreen() {
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Header />
         <SubHeader />
         <Category />
