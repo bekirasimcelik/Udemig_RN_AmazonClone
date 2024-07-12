@@ -7,7 +7,6 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import PrimeLogo from '../assets/prime-logo.png';
 import {ProductData} from '../data/ProductData';
 import {getRaid} from '../utils/helpers';

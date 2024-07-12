@@ -1,3 +1,4 @@
+import React from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export const getRaid = rating => {
